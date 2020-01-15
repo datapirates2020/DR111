@@ -1,0 +1,64 @@
+
+
+h1{
+    color: #000000;
+}
+button:hover {
+  opacity: 0.8;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+#alumni{
+    float: left;
+    text-align: center;
+    padding: 2%;
+    width : 25%;
+}
+#clg{
+    float: left;
+    text-align: center;
+    padding: 2%;
+    width:  25%;
+}
+#dt{
+    float: left;
+    text-align: center;
+    padding: 2%;
+    width: 25%;
+}
+/* Extra style for the cancel button (red) */
+.alumloginbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+.clgloginbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #2a18cf;
+}
+.dtloginbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #cabe17;
+}
+
+
+/* Avatar image */
+img.alumavatar {
+  width: auto;
+  height: auto;
+  border-radius: 15%;
+}
+img.clgavatar {
+  width: auto;
+  height: auto;
+  border-radius: 15%;
+}
+img.dtavatar {
+  width: auto;
+  height: auto;
+  border-radius: 15%;
+}

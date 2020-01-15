@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    {%  load static %}
+    <link rel="stylesheet" href="{% static 'css/alumlogin.css'%}">
+
+
+
+</head>
+<body>
+
+    <form >
+        <div class="imgcontainer">
+          <img src="{% static 'images/alumavatar.jpg' %}" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="email" placeholder="Enter Email-ID" name="uname" required>
+            <br>
+            <br>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <div class="buttons">
+            <button type="submit">Login</button>
+            <button type="button">Register</button>
+          </div>
+
+        <div class="container" >
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </div>
+      </form>
+
+</body>
+</html>
