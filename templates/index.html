@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+
+    {%  load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+
+</head>
+<body>
+    <div id="alumni">
+        <h1>Alumni </h1>
+            <form >
+                <div >
+                    <img src="{% static 'images/alumavatar.jpg' %}" alt="Avatar" class="alumavatar">
+                </div>
+
+                <div>
+                    <button type="button" class="alumloginbtn"  onclick="location.href='{% url 'alumni' %}'">Login</button>
+                </div>
+
+
+            </form>
+    </div>
+
+    <div id="clg">
+        <h1>College </h1>
+            <form >
+                <div >
+                    <img src="{% static 'images/alumavatar.jpg' %}" alt="Avatar" class="clgavatar">
+                </div>
+
+                <div>
+                    <button type="button" class="alumloginbtn"  onclick="location.href='{% url 'clg' %}'">Login</button>
+                </div>
+
+
+            </form>
+    </div>
+
+    <div id="dt">
+        <h1>Directorate </h1>
+            <form >
+                <div >
+                    <img src="{% static 'images/alumavatar.jpg' %}" alt="Avatar" class="dtavatar">
+                </div>
+
+                <div>
+                    <button type="button" class="alumloginbtn"  onclick="location.href='{% url 'dte' %}'">Login</button>
+                </div>
+
+
+            </form>
+    </div>
+
+    <script>
+        function alumlogin{
+
+        }
+    </script>
+
+  </body>
+</html>
