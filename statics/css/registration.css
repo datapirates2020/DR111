@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+  }
+  p{
+      margin-top: 1%;
+      font-size: 1em;
+  }
+  * {
+    box-sizing: border-box;
+  }
+
+  .page{
+border: 2px lightblue;
+  }
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+    background-color: white;
+
+  }
+
+  .form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  /* Add some margins for each label */
+  .form-inline label {
+    margin: 5px 10px 5px 5px;
+  }
+
+  /* Style the input fields */
+  .form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  form hr{
+    border: 1px solid #ffffff;
+  }
+  input[type=text]:focus, input[type=password]:focus ,input[type=number]:focus ,input[type=email]:focus,input[type=date]:focus{
+    background-color: #ddd;
+    outline: none;
+  }
+
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 15px;
+  }
+
+
+  h1{
+      background-color: lightblue;
+      text-align: center;
+  }
+  .form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  /* Add some margins for each label */
+  .form-inline label {
+    margin: 5px 10px 5px 0;
+  }
+
+  /* Style the input fields */
+  .form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+
+  .next {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  button:hover {
+    opacity: 0.8;
+  }

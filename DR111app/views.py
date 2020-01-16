@@ -9,3 +9,5 @@ def clglogin(request):
     return render(request,'clglogin.html')
 def dtlogin(request):
     return render(request,'dtlogin.html')
+def alumregistration_1(request):
+    return render(request,'alumniregistration_1.html')
