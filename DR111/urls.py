@@ -21,5 +21,6 @@ urlpatterns = [
     path('', views.home),
     path('alumni/',views.alumlogin, name='alumni'),
     path('clg/',views.clglogin,name='clg'),
-    path('dte/',views.dtlogin,name='dte')
+    path('dte/',views.dtlogin,name='dte'),
+    path('alumniregistration/',views.alumregistration_1,name='alumniregistration_1')
 ]

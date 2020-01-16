@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Registration
+</title>
+ {%  load static %}
+    <link rel="stylesheet" href="{% static 'css/registration.css'%}">
+</head>
+<body>
+    <h1> Alumni Registration Form</h1>
+    <div align="center" class="page">
+        <p><b>
+            Please Enter your Personal Details
+        </b></p>
+
+
+    <form >
+        <div class="container" align="center">
+
+          <hr>
+          <label for="name" ><b>Full name</b></label>
+          <input type="text" placeholder="Full name" name="name" required>
+          <hr>
+          <label for="email"><b>Email-ID</b></label>
+          <input type="email" placeholder="Email" name="email" required>
+          <hr>
+          <label for="number"><b>Phone Number</b></label>
+          <input type="number" placeholder="Phone No." name="number" required>
+          <hr>
+          <label for="birth"><b>Birth Date</b></label>
+          <input type="date" placeholder="Birth date" name="birth" required>
+          <hr>
+          <label for="address"><b>Address</b></label>
+          <input type="text" placeholder="Address" name="address" required>
+          <hr>
+          <label for="Gender"><b>Gender</b></label>
+          <select id="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+          </select>
+          </div>
+      </form>
+    </div>
+    <button type="button" class="next">Next</button>
+</body>
+</html>
