@@ -1,3 +1,9 @@
+{% if messg %}
+<script>
+    alert('{{messg}}');
+</script>
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +18,8 @@
 </head>
 <body>
 
-    <form >
+    <form action="/postsign/" method="post" >
+        {% csrf_token %}
         <div class="imgcontainer">
           <img src="{% static 'images/alumavatar.jpg' %}" alt="Avatar" class="avatar">
         </div>
@@ -26,7 +33,7 @@
           <input type="password" placeholder="Enter Password" name="psw" required>
           <div class="buttons">
             <button type="submit">Login</button>
-            <button type="button"  onclick="location.href='{% url 'alumniregistration_1' %}'">Register</button>
+            <button type="button">Register</button>
           </div>
 
         <div class="container" >
