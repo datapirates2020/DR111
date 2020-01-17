@@ -25,6 +25,9 @@ urlpatterns = [
     path('dte/',views.dtlogin,name='dte'),
     path('postsign/',views.postsign),
     path('logout/',views.logout,name="log"),
+    path('academic/',views.academic,name="academic"),
+    path('professional/',views.professional,name="prof"),
+    path('alumniregistration/',views.alumniregistration_1,name="alumniregistration_1")
   #  path('password_reset/$',auth_views.password_reset,name="password_reset"),
   #  path('password_reset/done/$',auth_views.password_reset_done,name="password_reset_done"),
    # path('password_reset/confirm/(?p<uidb64>[\w-]+)/(?p<token>[\w-]+)/$',auth_views.password_reset_confirm,name="password_reset_confirm"),

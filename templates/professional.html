@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Registration
+</title>
+    {%  load static %}
+    <link rel="stylesheet" href="{% static 'css/professional.css'%}"></head>
+<body>
+    <h1> Alumni Registration Form</h1>
+    <div align="center" class="page">
+        <p><b>
+            Please Enter your Professional Details
+        </b></p>
+        <form >
+            <div class="container" align="center">
+
+              <hr>
+              <label for="jobs" ><b>Select number of jobs taken</b></label>
+              <select name="list1" id="list1" onchange="generate();">
+                <option > -- Select a Number -- </option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five</option>
+                <option value="6">Six</option>
+                <option value="7">Seven</option>
+                <option value="8">Eight</option>
+            </select>
+            <table id="tb1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            <hr>
+
+        <label for="field"><b>Current Job Field</b></label>
+        <select name="list2" id="list2" >
+            <option > -- Select a Field -- </option>
+            <option value="f1">Machine Learning</option>
+            <option value="f2">Artificial Intellingence</option>
+            <option value="f3">Web Developer</option>
+            <option value="f4">Dentist</option>
+            <option value="f5">Oncology</option>
+            <option value="f6">CA</option>
+            <option value="f7">CS</option>
+            <option value="f8">Graphic Designer</option>
+        </select>
+          <hr>
+
+          <label for="number"><b>Years Of Experience</b></label>
+          <input type="range" min="1" max="50" value="25" class="slider" id="myExp">
+          <hr>
+          <span>Value : </span><span id="exp" style="font-weight: bold;color:black;"></span>
+          <hr>
+          </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+</body>
+</html>
+<script>
+
+function generate() {
+
+var tableName = "tb1";
+
+cleartable(tableName);
+inserttable(tableName);
+
+}
+function inserttable(tableName) {
+var tb1 = document.getElementById(tableName);
+var n = parseInt(document.getElementById("list1").value);
+for (i = 1; i <= n; i++) {
+    var row = tb1.insertRow();
+    var cell = row.insertCell();
+    var t1 = document.createElement("input");
+    t1.type = "text";
+    t1.id = "t" + i; //"t1"
+    cell.appendChild(t1);
+
+}
+}
+function cleartable() {
+var tb1 = document.getElementById("tb1");
+while (tb1.rows.length > 1) {
+    tb1.deleteRow(1);
+}
+}
+
+
+
+
+
+var slider = document.getElementById("myExp");
+var output = document.getElementById("exp");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+
+</script>

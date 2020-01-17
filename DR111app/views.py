@@ -49,3 +49,9 @@ def postsign(request):
 def logout(request):
     auth.logout(request)
     return render(request,'alumlogin.html')
+def academic(request):
+    return render(request,'academic.html')
+def professional(request):
+    return render(request,'professional.html')
+def alumniregistration_1(request):
+    return render(request,'alumniregistration_1.html')
