@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Registration
+</title>
+    {%  load static %}
+    <link rel="stylesheet" href="{% static 'css/registration.css'%}"></head>
+<body>
+    <h1> Alumni Registration Form</h1>
+    <div align="center" class="page">
+        <p><b>
+            Please Enter your Academic Details
+        </b></p>
+
+
+    <form >
+        <div class="container" align="center">
+
+          <hr>
+          <label for="clgname" ><b>College Name</b></label>
+          <select id="clgname">
+            <option value="1">St Xaviers College, Mapusa</option>
+            <option value="2">Institute Of Management Training And Research, Margao</option>
+            <option value="3">National Institute of Oceanography NIO, Dona Paula</option>
+            <option value="4">Carmel College For Women, Goa</option>
+            <option value="5">SES Shri Kamaxidevi Homoeopathic Medical College & Hospital, Shiroda</option>
+            <option value="6">Murgaon Education Societys MES College Of Arts And Commerce, Goa</option>
+            <option value="7">Goa College Of Arts, Panaji</option>
+            <option value="8">Goa College Of Architecture, Goa</option>
+            <option value="9">Goa College of Pharmacy, Panaji</option>
+        </select>
+          <hr>
+
+          <label for="passout"><b>Passing Year</b></label>
+          <input type="number" min="1950" max="2016" step="1" value="2016" required/>
+          <hr>
+          <label for="branch"><b>Branch/Subject</b></label>
+          <select id="branch">
+              <option value="BA">Bachelor of Arts </option>
+              <option value="BCom">Bachelor of Commerce </option>
+              <option value="BSc">Bachelor of Science </option>
+              <option value="Diploma">Post Graduate Diploma Management </option>
+              <option value="MSocean">Master of Science Oceanography  </option>
+              <option value="PHDOcean">Doctor of Philosophy  Oceanography </option>
+              <option value="BTech">Bachelor of Technology </option>
+              <option value="BHMS">Bachelor of Homoeopathic Medicine and Surgery </option>
+              <option value="BBA">Bachelor of Business Administration  </option>
+              <option value="BFA">Bachelor of Fine Arts </option>
+              <option value="PharmA">Bachelor of Pharmacy  </option>
+
+          </select>
+          </div>
+      </form>
+    </div>
+    <button type="button" class="next" onclick="location.href='{% url 'prof' %}'">Next</button>
+</body>
+</html>
