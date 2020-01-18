@@ -8,12 +8,21 @@
     <link rel="stylesheet" href="{% static 'css/index.css'%}">
 
 </head>
-<body>
+<style>
+    body{
+    background-image:url({% static 'images/back.jpg'%});
+    background-size:100%;
+    background-blend-mode: lighten;
+
+}
+</style>
+<body >
+
     <div id="alumni">
         <h1>Alumni </h1>
             <form >
                 <div >
-                    <img src="{% static 'images/alumavatar.jpg' %}" alt="Avatar" class="alumavatar">
+                    <img src="{% static 'images/alumavatar.jpg' %}"  style=" width:210px ;height:210px;" alt="Avatar" class="alumavatar">
                 </div>
 
                 <div>
@@ -28,7 +37,7 @@
         <h1>College </h1>
             <form >
                 <div >
-                    <img src="{% static 'images/alumavatar.jpg' %}" alt="Avatar" class="clgavatar">
+                    <img src="{% static 'images/clg.jpg' %}" style=" width:210px ;height:210px;" alt="Avatar" class="clgavatar">
                 </div>
 
                 <div>
@@ -43,7 +52,7 @@
         <h1>Directorate </h1>
             <form >
                 <div >
-                    <img src="{% static 'images/alumavatar.jpg' %}" alt="Avatar" class="dtavatar">
+                    <img src="{% static 'images/dt.jpg' %}"  style=" width:210px ;height:210px;" alt="Avatar" class="dtavatar">
                 </div>
 
                 <div>
@@ -54,11 +63,8 @@
             </form>
     </div>
 
-    <script>
-        function alumlogin{
-
-        }
-    </script>
 
   </body>
+
+
 </html>
