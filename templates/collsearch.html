@@ -22,22 +22,46 @@
         <header>
             <h1>College <i class="fa fa-bell" style="font-size:30px"></i></h1>
         </header>
-    <form class="box" action="collsearch.html" method="post"></form>
+
     <h2>Search Alumni</h2>
+
+<!--    <form class="box"  action="/postcollsearch/" method="get">-->
+        <form action="/postcollsearch/" method="post">
     <article>
-        Passout Year: <input type="number" name="spassyr" placeholder="Student Passout Year " required><br>
-        <br>Student Name: <input type="text" name="sname" placeholder="Student Name" required><br><br>
-        Branch: <input type="text" name="sbranch" placeholder="eg.Computer" required></article>
+
+        Passout Year:  <input type="number" name="passout" min="1950" max="2016" step="1" value="2016" required/><br>
+        <br>Student Name: <input type="text" name="sname" placeholder="Student Name"><br><br>
+        <label for="branch"><b>Branch/Subject</b></label>
+          <select id="branch" name="branch">
+              <option value="BA">Bachelor of Arts </option>
+              <option value="BCom">Bachelor of Commerce </option>
+              <option value="BSc">Bachelor of Science </option>
+              <option value="Diploma">Post Graduate Diploma Management </option>
+              <option value="MSocean">Master of Science Oceanography  </option>
+              <option value="PHDOcean">Doctor of Philosophy  Oceanography </option>
+              <option value="BTech">Bachelor of Technology </option>
+              <option value="BHMS">Bachelor of Homoeopathic Medicine and Surgery </option>
+              <option value="BBA">Bachelor of Business Administration  </option>
+              <option value="BFA">Bachelor of Fine Arts </option>
+              <option value="PharmA">Bachelor of Pharmacy  </option>
+
+          </select><br><br></article>
         <article>
         <h3>Other:</h3>
-                Email: <input type="text" name="email" placeholder="Enter email"><br><br>
-                Phone No: <input type="text" name="phone" placeholder="Student ph no.">
-        </article>
-        <p class="search button"> 
-           <h2> <input type="submit" value="Search" /></h2> 
-        </p>
-    </div>
 
+            {%csrf_token%}
+                Email: <input type="email" name="email" placeholder="Enter email"><br><br>
+                Phone No: <input type="number" name="phone" placeholder="Student ph no.">
+
+                    <input type="hidden" value="{{uid}}" name="uid">
+                <p class="search button">
+        <h2><input type = "Submit"></h2>
+
+        </p>
+<!--        </form>-->
+
+        </article></form>
+        </div>
 
     </body>
 </html>
