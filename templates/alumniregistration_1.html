@@ -15,7 +15,9 @@ Registration
         </b></p>
 
 
-    <form >
+    <form action="/postsignup/" method="post">
+        {% csrf_token %}
+
         <div class="container" align="center">
 
           <hr>
@@ -25,24 +27,72 @@ Registration
           <label for="email"><b>Email-ID</b></label>
           <input type="email" placeholder="Email" name="email" required>
           <hr>
-          <label for="number"><b>Phone Number</b></label>
-          <input type="number" placeholder="Phone No." name="number" required>
+             <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="password" name="password" required>
           <hr>
-          <label for="birth"><b>Birth Date</b></label>
-          <input type="date" placeholder="Birth date" name="birth" required>
+<!--          <label for="number"><b>Phone Number</b></label>-->
+<!--          <input type="number" placeholder="Phone No." name="number" required>-->
+<!--          <hr>-->
+<!--          <label for="birth"><b>Birth Date</b></label>-->
+<!--          <input type="date" placeholder="Birth date" name="birth" required>-->
+<!--          <hr>-->
+<!--          <label for="address"><b>Address</b></label>-->
+<!--          <input type="text" placeholder="Address" name="address" required>-->
+<!--          <hr>-->
+<!--          <label for="Gender"><b>Gender</b></label>-->
+<!--          <select id="gender">-->
+<!--              <option value="Male">Male</option>-->
+<!--              <option value="Female">Female</option>-->
+<!--              <option value="Other">Other</option>-->
+<!--          </select>-->
+
+
+
+
+          <label for="clgname" ><b>College Name</b></label>
+          <select id="clgname">
+            <option value="1">St Xaviers College, Mapusa</option>
+            <option value="2">Institute Of Management Training And Research, Margao</option>
+            <option value="3">National Institute of Oceanography NIO, Dona Paula</option>
+            <option value="4">Carmel College For Women, Goa</option>
+            <option value="5">SES Shri Kamaxidevi Homoeopathic Medical College & Hospital, Shiroda</option>
+            <option value="6">Murgaon Education Societys MES College Of Arts And Commerce, Goa</option>
+            <option value="7">Goa College Of Arts, Panaji</option>
+            <option value="8">Goa College Of Architecture, Goa</option>
+            <option value="9">Goa College of Pharmacy, Panaji</option>
+        </select>
           <hr>
-          <label for="address"><b>Address</b></label>
-          <input type="text" placeholder="Address" name="address" required>
+
+          <label for="passout"><b>Passing Year</b></label>
+          <input type="number" min="1950" max="2016" step="1" value="2016" required/>
           <hr>
-          <label for="Gender"><b>Gender</b></label>
-          <select id="gender">
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
+          <label for="branch"><b>Branch/Subject</b></label>
+          <select id="branch">
+              <option value="BA">Bachelor of Arts </option>
+              <option value="BCom">Bachelor of Commerce </option>
+              <option value="BSc">Bachelor of Science </option>
+              <option value="Diploma">Post Graduate Diploma Management </option>
+              <option value="MSocean">Master of Science Oceanography  </option>
+              <option value="PHDOcean">Doctor of Philosophy  Oceanography </option>
+              <option value="BTech">Bachelor of Technology </option>
+              <option value="BHMS">Bachelor of Homoeopathic Medicine and Surgery </option>
+              <option value="BBA">Bachelor of Business Administration  </option>
+              <option value="BFA">Bachelor of Fine Arts </option>
+              <option value="PharmA">Bachelor of Pharmacy  </option>
+
           </select>
-          </div>
+
+
+
+
+        <button type="submit">Register</button>
+        </div>
       </form>
     </div>
-    <button type="button" class="next" onclick="location.href='{% url 'academic' %}'">Next</button>
+
+<!--    <button type="button" class="next" onclick="location.href='{% url 'academic' %}'">Next</button>-->
+    <button type="button" class="next" onclick="location.href='{% url 'alumni' %}'">Back</button>
+
 </body>
 </html>
+
