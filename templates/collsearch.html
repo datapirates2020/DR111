@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>College Search form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="College Search Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />
+        <title>ClgSerarch</title>
+            {%  load static %}
+            <link rel="stylesheet" href="{% static 'css/clganddt_search.css'%}">
+    </head>
+    <body> <div class="container">
+        <header>
+            <h1>College Search </h1>
+        </header>
+    <form class="box" action="collsearch.html" method="post"></form>
+    <h2>Search Alumni</h2>
+    <article>
+        Passout Year: <input type="text" name="spassyr" placeholder="Student Passout Year"><br>
+        <br>Student Name: <input type="text" name="sname" placeholder="Student Name"><br><br>
+        Branch: <input type="text" name="sbranch" placeholder="eg.Computer"></article>
+        <article>
+        <h3>Other:</h3>
+                Email: <input type="text" name="email" placeholder="Enter email"><br><br>
+                Phone No: <input type="text" name="phone" placeholder="Student ph no.">
+        </article>
+        <p class="search button"> 
+           <h2> <input type="submit" value="Search" /></h2> 
+        </p>
+    </body>

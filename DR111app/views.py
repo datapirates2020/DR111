@@ -73,6 +73,10 @@ def academic(request):
     return render(request,'academic.html')
 def professional(request):
     return render(request,'professional.html')
+def collsearch(request):
+    return render(request,'collsearch.html')
+def dir(request):
+    return render(request,'dir.html')
 def postsignup(request):
     name=request.POST.get('name')
     email=request.POST.get('email')
