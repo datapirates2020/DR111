@@ -22,6 +22,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('alumni/',views.alumlogin, name='alumni'),
     path('clg/',views.clglogin,name='clg'),
+    path('collegeLogin/', views.postclglogin, name='postclglogin'),
     path('dte/',views.dtlogin,name='dte'),
     path('postsign/',views.postsign),
     path('logout/',views.logout,name="log"),
@@ -38,8 +39,8 @@ urlpatterns = [
     path('professional/',views.professional,name="prof"),
     path('alumniregistration/',views.register,name="alumniregistration_1"),
     path('dir/',views.dir,name="dir"),
-    path('collsearch/',views.collsearch,name="collsearch")
-
+    path('collsearch/',views.collsearch,name="collsearch"),
+    path('postcollsearch/', views.postcollsearch, name="postcollsearch"),
   #  path('password_reset/$',auth_views.password_reset,name="password_reset"),
   #  path('password_reset/done/$',auth_views.password_reset_done,name="password_reset_done"),
    # path('password_reset/confirm/(?p<uidb64>[\w-]+)/(?p<token>[\w-]+)/$',auth_views.password_reset_confirm,name="password_reset_confirm"),

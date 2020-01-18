@@ -8,7 +8,8 @@
 
 </head>
 <body>
-    <form >
+    <form action="/collegeLogin/" method="post">
+        {% csrf_token %}
         <div class="imgcontainer">
           <img src="{% static 'images/alumavatar.jpg' %}" alt="Avatar" class="avatar">
         </div>
@@ -21,7 +22,7 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
           <div class="buttons">
-            <button type="button" onclick="location.href='{% url 'collsearch' %}'">Login</button>
+                <input type="submit" placeholder="Submit">
 <!--            <button type="button">Register</button>-->
           </div>
 
