@@ -15,17 +15,19 @@
         <title>ClgSerarch</title>
             {%  load static %}
             <link rel="stylesheet" href="{% static 'css/clganddt_search.css'%}">
+            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     </head>
     <body> <div class="container">
         <header>
-            <h1>College Search </h1>
+            <h1>College <i class="fa fa-bell" style="font-size:30px"></i></h1>
         </header>
     <form class="box" action="collsearch.html" method="post"></form>
     <h2>Search Alumni</h2>
     <article>
-        Passout Year: <input type="text" name="spassyr" placeholder="Student Passout Year"><br>
-        <br>Student Name: <input type="text" name="sname" placeholder="Student Name"><br><br>
-        Branch: <input type="text" name="sbranch" placeholder="eg.Computer"></article>
+        Passout Year: <input type="number" name="spassyr" placeholder="Student Passout Year " required><br>
+        <br>Student Name: <input type="text" name="sname" placeholder="Student Name" required><br><br>
+        Branch: <input type="text" name="sbranch" placeholder="eg.Computer" required></article>
         <article>
         <h3>Other:</h3>
                 Email: <input type="text" name="email" placeholder="Enter email"><br><br>
@@ -34,4 +36,8 @@
         <p class="search button"> 
            <h2> <input type="submit" value="Search" /></h2> 
         </p>
+    </div>
+
+
     </body>
+</html>
