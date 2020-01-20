@@ -41,6 +41,7 @@ urlpatterns = [
     path('dir/',views.dir,name="dir"),
     path('collsearch/',views.collsearch,name="collsearch"),
     path('postcollsearch/', views.postcollsearch, name="postcollsearch"),
+    path('searchdetails/', views.searchdetails, name='searchdetails'),
   #  path('password_reset/$',auth_views.password_reset,name="password_reset"),
   #  path('password_reset/done/$',auth_views.password_reset_done,name="password_reset_done"),
    # path('password_reset/confirm/(?p<uidb64>[\w-]+)/(?p<token>[\w-]+)/$',auth_views.password_reset_confirm,name="password_reset_confirm"),

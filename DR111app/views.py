@@ -137,16 +137,23 @@ def postcollsearch(request):
     email = request.POST.get('email')
     phone = request.POST.get('phone')
     college = database.child('uid').child(uid).get().val()
+
     keys = database.child('COLLEGES').child(college).child('STUDENT DETAILS').shallow().get().val()
+    print(keys)
     flag = 0
     for i in keys:
+        print(database.child('COLLEGES').child(college).child('STUDENT DETAILS').child(i).child('PERSONAL DETAILS').child(
+                'EMAIL').get().val())
+        print(database.child('COLLEGES').child(college).child('STUDENT DETAILS').child(i).child('PERSONAL DETAILS').child(
+                'name').get().val())
         if database.child('COLLEGES').child(college).child('STUDENT DETAILS').child(i).child('PERSONAL DETAILS').child(
-                'email').get().val() == email and database.child('COLLEGES').child(college).child(
-                'STUDENT DETAILS').child(i).child('PERSONAL DETAILS').child('name').get().val().lower() == name.lower():
+                'EMAIL').get().val() == email and database.child('COLLEGES').child(college).child('STUDENT DETAILS').child(i).child('PERSONAL DETAILS').child(
+                'NAME').get().val():
             print("got you mmffffff")
             flag = 1
             break
-    print("flag", flag)
+    if flag==1:
+        return render(request , 'aftersearch.html', {'message': 'The student exists in the database'})
     print("i am here", uid, email)
 
     return redirect('/')
@@ -164,3 +171,6 @@ def postclglogin(request):
     clguid = user['localId']
     print(clguid)
     return render(request, 'collsearch.html', {'uid': clguid})
+
+def searchdetails(request):
+    return render(request, 'searchdetails.html')
